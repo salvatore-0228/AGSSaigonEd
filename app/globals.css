@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/Aspect2-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    /* Base colors - Light theme with metallic accents */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    
+    /* Metallic primary - Silver/Steel */
+    --primary: 0 0% 25%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Secondary - Light silver */
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 15%;
+    
+    /* Muted - Soft grays */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
+    
+    /* Accent - Metallic gold/bronze */
+    --accent: 45 25% 35%;
+    --accent-foreground: 0 0% 98%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders and inputs */
+    --border: 0 0% 87%;
+    --input: 0 0% 92%;
+    --ring: 0 0% 25%;
+    
+    /* Charts with metallic tones */
+    --chart-1: 0 0% 20%;
+    --chart-2: 45 15% 25%;
+    --chart-3: 0 0% 35%;
+    --chart-4: 45 25% 30%;
+    --chart-5: 0 0% 40%;
+    
+    --radius: 0.5rem;
+    
+    /* Sidebar with metallic theme */
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 25%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 45 25% 35%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 87%;
+    --sidebar-ring: 0 0% 25%;
+  }
+  .dark {
+    /* Dark theme with metallic accents */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Metallic primary - Lighter silver for dark mode */
+    --primary: 0 0% 75%;
+    --primary-foreground: 0 0% 8%;
+    
+    /* Secondary - Dark silver */
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 85%;
+    
+    /* Muted - Dark grays */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    /* Accent - Brighter metallic gold for dark mode */
+    --accent: 45 40% 55%;
+    --accent-foreground: 0 0% 8%;
+    
+    /* Destructive */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders and inputs */
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 75%;
+    
+    /* Charts with metallic tones for dark mode */
+    --chart-1: 0 0% 80%;
+    --chart-2: 45 30% 65%;
+    --chart-3: 0 0% 65%;
+    --chart-4: 45 40% 55%;
+    --chart-5: 0 0% 55%;
+    
+    /* Sidebar with dark metallic theme */
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 0 0% 75%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 45 40% 55%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
